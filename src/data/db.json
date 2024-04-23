@@ -1,0 +1,18 @@
+{
+    "foods":[{
+        "id": 0,
+        "name":"apple",
+        "description":"juice",
+        "color": "red",
+        "group":"fruit"
+    },
+    {
+        "id": 1,
+        "name":"banana",
+        "description":"photasio",
+        "color": "yellow",
+        "group":"fruit"
+    }
+
+]
+}
