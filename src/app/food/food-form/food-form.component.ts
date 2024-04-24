@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { IFood, MyAppState, Action, ACTIONS } from '../food-store/food.reducer';
+import { IFood, MyAppState, Action, ACTIONS } from '../food.reducer';
 import { Store } from '@ngrx/store';
 import { FormControl, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-food-form',
-  templateUrl: './food-form.component.html',
-  styleUrl: './food-form.component.scss',
+  
   standalone: true,
+  templateUrl: './food-form.component.html',
+  styleUrl: './food-form.component.scss'
 })
 export class FoodFormComponent implements OnInit {
   food: IFood | undefined;

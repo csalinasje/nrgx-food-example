@@ -2,7 +2,6 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Actions,createEffect, ofType } from "@ngrx/effects";
 import { Observable, catchError, of, map, mergeMap } from "rxjs";
-import { Action } from "@ngrx/store";
 
 
 @Injectable()

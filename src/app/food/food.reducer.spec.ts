@@ -1,5 +1,6 @@
-import { log } from "console";
+
 import {ACTIONS, IFood, food_reducer, Action} from "./food.reducer"
+
 describe('Food reducer', ()=>{
     it('should add food to new state', ()=>{
         let initialState: Array<IFood> = [];
