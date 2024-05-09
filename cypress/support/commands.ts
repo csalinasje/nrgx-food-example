@@ -3,18 +3,24 @@
 // with Intellisense and code completion in your
 // IDE or Text Editor.
 // ***********************************************
-// declare namespace Cypress {
-//   interface Chainable<Subject = any> {
-//     customCommand(param: any): typeof customCommand;
-//   }
-// }
-//
-// function customCommand(param: any): void {
-//   console.warn(param);
-// }
-//
+declare namespace Cypress {
+  interface Chainable<Subject = any> {
+    createFood(id: string, name:string, description:string, color:string, group:string ): typeof createFood;
+  }
+}
+
+function createFood(id: string, name:string, description:string, color:string, group:string): void {
+    cy.visit('/')
+    cy.get('[formControlName="food.id"]').type(id)
+    cy.get('[formControlName="food.name"]').type(name)
+    cy.get('[formControlName="food.description"]').type(description)
+    cy.get('[formControlName="food.color"]').type(color)
+    cy.get('[formControlName="food.group"]').type(group)
+    cy.get('button').click()
+}
+
 // NOTE: You can use it like so:
-// Cypress.Commands.add('customCommand', customCommand);
+Cypress.Commands.add('createFood', createFood);
 //
 // ***********************************************
 // This example commands.js shows you how to
